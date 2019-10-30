@@ -1,0 +1,9 @@
+The output of the following command,
+
+  find . -type f -name *.ts | xargs grep CanvasRenderingContext2D
+
+, has been used to collect all *.ts files with references to CanvasRenderingContext2D. Use
+
+  vim -S CanvasRenderingContext2D.vim
+
+to see them.
