@@ -99,7 +99,7 @@ export function convertTime(time: Time): TimePoint {
 }
 
 function getLineBasedSeriesItemValue(item: LineData | HistogramData, palette: Palette): Bar['value'] {
-	const val = Array.isArray(item.value) ? item.value[1] : item.value; // 10181
+	const val = Array.isArray(item.value) ? item.value[1] : item.value;
 	// default value
 	let color: PlotValue = null;
 	if ('color' in item) {

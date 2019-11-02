@@ -43,9 +43,29 @@ export class PaneRendererLine implements IPaneRenderer {
 		walkLine(ctx, this._data.items, this._data.lineType, this._data.visibleRange);
 		ctx.stroke();
 
-		this._drawAmounts(ctx);
+		this._drawAmounts(ctx, this._data.items, this._data.visibleRange);
 	}
 
-	private _drawAmounts(ctx: CanvasRenderingContext2D): void {
+	private _drawAmounts(
+		ctx: CanvasRenderingContext2D,
+		points: ReadonlyArray<LinePoint>,
+		visibleRange: SeriesItemsIndexesRange
+  ): void {
+		if (points.length === 0) {
+			return;
+		}
+
+		ctx.beginPath();
+		for (let i = visibleRange.from; i < visibleRange.to; ++i) {
+			const currItem = points[i];
+			if (i % 2) {
+				ctx.moveTo(currItem.x, 0);
+				ctx.lineTo(currItem.x, 200);
+			} else {
+				ctx.moveTo(currItem.x, ctx.canvas.height);
+				ctx.lineTo(currItem.x, ctx.canvas.height - 100);
+			}
+		}
+		ctx.stroke();
 	}
 }
