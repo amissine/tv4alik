@@ -1002,12 +1002,12 @@ setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 1 - ((0 * winheight(0) + 3) / 7)
+let s:l = 12 - ((6 * winheight(0) + 3) / 7)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-1
-normal! 0
+12
+normal! 07|
 lcd ~/product/lightweight-charts
 wincmd w
 argglobal
@@ -1647,11 +1647,11 @@ setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 532 - ((5 * winheight(0) + 3) / 6)
+let s:l = 1 - ((0 * winheight(0) + 3) / 6)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-532
+1
 normal! 0
 lcd ~/product/lightweight-charts
 wincmd w
@@ -2483,10 +2483,7 @@ wincmd _ | wincmd |
 split
 wincmd _ | wincmd |
 split
-wincmd _ | wincmd |
-split
-5wincmd k
-wincmd w
+4wincmd k
 wincmd w
 wincmd w
 wincmd w
@@ -2498,12 +2495,11 @@ set winminheight=0
 set winheight=1
 set winminwidth=0
 set winwidth=1
-exe '1resize ' . ((&lines * 7 + 24) / 48)
-exe '2resize ' . ((&lines * 7 + 24) / 48)
-exe '3resize ' . ((&lines * 7 + 24) / 48)
-exe '4resize ' . ((&lines * 6 + 24) / 48)
-exe '5resize ' . ((&lines * 7 + 24) / 48)
-exe '6resize ' . ((&lines * 6 + 24) / 48)
+exe '1resize ' . ((&lines * 8 + 24) / 48)
+exe '2resize ' . ((&lines * 8 + 24) / 48)
+exe '3resize ' . ((&lines * 8 + 24) / 48)
+exe '4resize ' . ((&lines * 9 + 24) / 48)
+exe '5resize ' . ((&lines * 8 + 24) / 48)
 argglobal
 setlocal keymap=
 setlocal noarabic
@@ -2624,7 +2620,7 @@ setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 1 - ((0 * winheight(0) + 3) / 7)
+let s:l = 1 - ((0 * winheight(0) + 4) / 8)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
@@ -2753,7 +2749,7 @@ setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 1 - ((0 * winheight(0) + 3) / 7)
+let s:l = 1 - ((0 * winheight(0) + 4) / 8)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
@@ -2882,136 +2878,7 @@ setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 1 - ((0 * winheight(0) + 3) / 7)
-if s:l < 1 | let s:l = 1 | endif
-exe s:l
-normal! zt
-1
-normal! 0
-lcd ~/product/lightweight-charts
-wincmd w
-argglobal
-if bufexists("~/product/lightweight-charts/src/renderers/line-renderer.ts") | buffer ~/product/lightweight-charts/src/renderers/line-renderer.ts | else | edit ~/product/lightweight-charts/src/renderers/line-renderer.ts | endif
-setlocal keymap=
-setlocal noarabic
-setlocal autoindent
-setlocal backupcopy=
-setlocal balloonexpr=
-setlocal nobinary
-setlocal nobreakindent
-setlocal breakindentopt=
-setlocal bufhidden=
-setlocal buflisted
-setlocal buftype=
-setlocal nocindent
-setlocal cinkeys=0{,0},0),0],:,0#,!^F,o,O,e
-setlocal cinoptions=
-setlocal cinwords=if,else,while,do,for,switch
-setlocal colorcolumn=
-setlocal comments=s1:/*,mb:*,ex:*/,://,b:#,:%,:XCOMM,n:>,fb:-
-setlocal commentstring=//\ %s
-setlocal complete=.,w,b,u,t,i
-setlocal concealcursor=
-setlocal conceallevel=0
-setlocal completefunc=
-setlocal nocopyindent
-setlocal cryptmethod=
-setlocal nocursorbind
-setlocal nocursorcolumn
-setlocal nocursorline
-setlocal define=
-setlocal dictionary=
-setlocal nodiff
-setlocal equalprg=
-setlocal errorformat=%+A\ %#%f\ %#(%l\\,%c):\ %m,%C%m
-setlocal expandtab
-if &filetype != 'typescript'
-setlocal filetype=typescript
-endif
-setlocal fixendofline
-setlocal foldcolumn=0
-setlocal foldenable
-setlocal foldexpr=0
-setlocal foldignore=#
-setlocal foldlevel=0
-setlocal foldmarker={{{,}}}
-setlocal foldmethod=manual
-setlocal foldminlines=1
-setlocal foldnestmax=20
-setlocal foldtext=foldtext()
-setlocal formatexpr=
-setlocal formatoptions=croql
-setlocal formatlistpat=^\\s*\\d\\+[\\]:.)}\\t\ ]\\s*
-setlocal formatprg=
-setlocal grepprg=
-setlocal iminsert=0
-setlocal imsearch=-1
-setlocal include=
-setlocal includeexpr=
-setlocal indentexpr=GetTypescriptIndent()
-setlocal indentkeys=o,O,*<Return>,<>>,<<>,/,{,},!^F,0],0)
-setlocal noinfercase
-setlocal iskeyword=@,48-57,_,192-255,$
-setlocal keywordprg=
-setlocal nolinebreak
-setlocal nolisp
-setlocal lispwords=
-setlocal nolist
-setlocal makeencoding=
-setlocal makeprg=tsc\ \ $*\ %
-setlocal matchpairs=(:),{:},[:]
-setlocal modeline
-setlocal modifiable
-setlocal nrformats=bin,octal,hex
-set number
-setlocal number
-setlocal numberwidth=4
-setlocal omnifunc=xmlcomplete#CompleteTags
-setlocal path=
-setlocal nopreserveindent
-setlocal nopreviewwindow
-setlocal quoteescape=\\
-setlocal noreadonly
-setlocal norelativenumber
-setlocal norightleft
-setlocal rightleftcmd=search
-setlocal noscrollbind
-setlocal scrolloff=-1
-setlocal shiftwidth=2
-setlocal noshortname
-setlocal sidescrolloff=-1
-setlocal signcolumn=auto
-setlocal nosmartindent
-setlocal softtabstop=0
-setlocal nospell
-setlocal spellcapcheck=[.?!]\\_[\\])'\"\	\ ]\\+
-setlocal spellfile=
-setlocal spelllang=en
-setlocal statusline=
-setlocal suffixesadd=.ts,.tsx
-setlocal swapfile
-setlocal synmaxcol=3000
-if &syntax != 'typescript'
-setlocal syntax=typescript
-endif
-setlocal tabstop=2
-setlocal tagcase=
-setlocal tags=
-setlocal termwinkey=
-setlocal termwinscroll=10000
-setlocal termwinsize=
-setlocal textwidth=0
-setlocal thesaurus=
-setlocal noundofile
-setlocal undolevels=-123456
-setlocal varsofttabstop=
-setlocal vartabstop=
-setlocal nowinfixheight
-setlocal nowinfixwidth
-setlocal wrap
-setlocal wrapmargin=0
-silent! normal! zE
-let s:l = 1 - ((0 * winheight(0) + 3) / 6)
+let s:l = 1 - ((0 * winheight(0) + 4) / 8)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
@@ -3140,7 +3007,7 @@ setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 1 - ((0 * winheight(0) + 3) / 7)
+let s:l = 1 - ((0 * winheight(0) + 4) / 9)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
@@ -3269,7 +3136,7 @@ setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 1 - ((0 * winheight(0) + 3) / 6)
+let s:l = 1 - ((0 * winheight(0) + 4) / 8)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
@@ -3277,12 +3144,11 @@ normal! zt
 normal! 0
 lcd ~/product/lightweight-charts
 wincmd w
-exe '1resize ' . ((&lines * 7 + 24) / 48)
-exe '2resize ' . ((&lines * 7 + 24) / 48)
-exe '3resize ' . ((&lines * 7 + 24) / 48)
-exe '4resize ' . ((&lines * 6 + 24) / 48)
-exe '5resize ' . ((&lines * 7 + 24) / 48)
-exe '6resize ' . ((&lines * 6 + 24) / 48)
+exe '1resize ' . ((&lines * 8 + 24) / 48)
+exe '2resize ' . ((&lines * 8 + 24) / 48)
+exe '3resize ' . ((&lines * 8 + 24) / 48)
+exe '4resize ' . ((&lines * 9 + 24) / 48)
+exe '5resize ' . ((&lines * 8 + 24) / 48)
 tabnext
 edit ~/product/lightweight-charts/tests/e2e/memleaks/memleaks-test-cases.ts
 set splitbelow splitright
@@ -3298,10 +3164,7 @@ wincmd _ | wincmd |
 split
 wincmd _ | wincmd |
 split
-wincmd _ | wincmd |
-split
-7wincmd k
-wincmd w
+6wincmd k
 wincmd w
 wincmd w
 wincmd w
@@ -3315,14 +3178,13 @@ set winminheight=0
 set winheight=1
 set winminwidth=0
 set winwidth=1
-exe '1resize ' . ((&lines * 5 + 24) / 48)
+exe '1resize ' . ((&lines * 6 + 24) / 48)
 exe '2resize ' . ((&lines * 5 + 24) / 48)
-exe '3resize ' . ((&lines * 5 + 24) / 48)
-exe '4resize ' . ((&lines * 5 + 24) / 48)
+exe '3resize ' . ((&lines * 6 + 24) / 48)
+exe '4resize ' . ((&lines * 6 + 24) / 48)
 exe '5resize ' . ((&lines * 5 + 24) / 48)
-exe '6resize ' . ((&lines * 4 + 24) / 48)
+exe '6resize ' . ((&lines * 6 + 24) / 48)
 exe '7resize ' . ((&lines * 5 + 24) / 48)
-exe '8resize ' . ((&lines * 4 + 24) / 48)
 argglobal
 setlocal keymap=
 setlocal noarabic
@@ -3443,7 +3305,7 @@ setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 1 - ((0 * winheight(0) + 2) / 5)
+let s:l = 1 - ((0 * winheight(0) + 3) / 6)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
@@ -3701,136 +3563,7 @@ setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 1 - ((0 * winheight(0) + 2) / 5)
-if s:l < 1 | let s:l = 1 | endif
-exe s:l
-normal! zt
-1
-normal! 0
-lcd ~/product/lightweight-charts
-wincmd w
-argglobal
-if bufexists("~/product/lightweight-charts/src/renderers/walk-line.ts") | buffer ~/product/lightweight-charts/src/renderers/walk-line.ts | else | edit ~/product/lightweight-charts/src/renderers/walk-line.ts | endif
-setlocal keymap=
-setlocal noarabic
-setlocal autoindent
-setlocal backupcopy=
-setlocal balloonexpr=
-setlocal nobinary
-setlocal nobreakindent
-setlocal breakindentopt=
-setlocal bufhidden=
-setlocal buflisted
-setlocal buftype=
-setlocal nocindent
-setlocal cinkeys=0{,0},0),0],:,0#,!^F,o,O,e
-setlocal cinoptions=
-setlocal cinwords=if,else,while,do,for,switch
-setlocal colorcolumn=
-setlocal comments=s1:/*,mb:*,ex:*/,://,b:#,:%,:XCOMM,n:>,fb:-
-setlocal commentstring=//\ %s
-setlocal complete=.,w,b,u,t,i
-setlocal concealcursor=
-setlocal conceallevel=0
-setlocal completefunc=
-setlocal nocopyindent
-setlocal cryptmethod=
-setlocal nocursorbind
-setlocal nocursorcolumn
-setlocal nocursorline
-setlocal define=
-setlocal dictionary=
-setlocal nodiff
-setlocal equalprg=
-setlocal errorformat=%+A\ %#%f\ %#(%l\\,%c):\ %m,%C%m
-setlocal expandtab
-if &filetype != 'typescript'
-setlocal filetype=typescript
-endif
-setlocal fixendofline
-setlocal foldcolumn=0
-setlocal foldenable
-setlocal foldexpr=0
-setlocal foldignore=#
-setlocal foldlevel=0
-setlocal foldmarker={{{,}}}
-setlocal foldmethod=manual
-setlocal foldminlines=1
-setlocal foldnestmax=20
-setlocal foldtext=foldtext()
-setlocal formatexpr=
-setlocal formatoptions=croql
-setlocal formatlistpat=^\\s*\\d\\+[\\]:.)}\\t\ ]\\s*
-setlocal formatprg=
-setlocal grepprg=
-setlocal iminsert=0
-setlocal imsearch=-1
-setlocal include=
-setlocal includeexpr=
-setlocal indentexpr=GetTypescriptIndent()
-setlocal indentkeys=o,O,*<Return>,<>>,<<>,/,{,},!^F,0],0)
-setlocal noinfercase
-setlocal iskeyword=@,48-57,_,192-255,$
-setlocal keywordprg=
-setlocal nolinebreak
-setlocal nolisp
-setlocal lispwords=
-setlocal nolist
-setlocal makeencoding=
-setlocal makeprg=tsc\ \ $*\ %
-setlocal matchpairs=(:),{:},[:]
-setlocal modeline
-setlocal modifiable
-setlocal nrformats=bin,octal,hex
-set number
-setlocal number
-setlocal numberwidth=4
-setlocal omnifunc=xmlcomplete#CompleteTags
-setlocal path=
-setlocal nopreserveindent
-setlocal nopreviewwindow
-setlocal quoteescape=\\
-setlocal noreadonly
-setlocal norelativenumber
-setlocal norightleft
-setlocal rightleftcmd=search
-setlocal noscrollbind
-setlocal scrolloff=-1
-setlocal shiftwidth=2
-setlocal noshortname
-setlocal sidescrolloff=-1
-setlocal signcolumn=auto
-setlocal nosmartindent
-setlocal softtabstop=0
-setlocal nospell
-setlocal spellcapcheck=[.?!]\\_[\\])'\"\	\ ]\\+
-setlocal spellfile=
-setlocal spelllang=en
-setlocal statusline=
-setlocal suffixesadd=.ts,.tsx
-setlocal swapfile
-setlocal synmaxcol=3000
-if &syntax != 'typescript'
-setlocal syntax=typescript
-endif
-setlocal tabstop=2
-setlocal tagcase=
-setlocal tags=
-setlocal termwinkey=
-setlocal termwinscroll=10000
-setlocal termwinsize=
-setlocal textwidth=0
-setlocal thesaurus=
-setlocal noundofile
-setlocal undolevels=-123456
-setlocal varsofttabstop=
-setlocal vartabstop=
-setlocal nowinfixheight
-setlocal nowinfixwidth
-setlocal wrap
-setlocal wrapmargin=0
-silent! normal! zE
-let s:l = 1 - ((0 * winheight(0) + 2) / 5)
+let s:l = 1 - ((0 * winheight(0) + 3) / 6)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
@@ -3959,7 +3692,7 @@ setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 1 - ((0 * winheight(0) + 2) / 5)
+let s:l = 1 - ((0 * winheight(0) + 3) / 6)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
@@ -4088,7 +3821,7 @@ setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 1 - ((0 * winheight(0) + 2) / 4)
+let s:l = 1 - ((0 * winheight(0) + 2) / 5)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
@@ -4217,7 +3950,7 @@ setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 45 - ((4 * winheight(0) + 2) / 5)
+let s:l = 45 - ((4 * winheight(0) + 3) / 6)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
@@ -4346,7 +4079,7 @@ setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 1 - ((0 * winheight(0) + 2) / 4)
+let s:l = 1 - ((0 * winheight(0) + 2) / 5)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
@@ -4354,48 +4087,48 @@ normal! zt
 normal! 0
 lcd ~/product/lightweight-charts
 wincmd w
-exe '1resize ' . ((&lines * 5 + 24) / 48)
+4wincmd w
+exe '1resize ' . ((&lines * 6 + 24) / 48)
 exe '2resize ' . ((&lines * 5 + 24) / 48)
-exe '3resize ' . ((&lines * 5 + 24) / 48)
-exe '4resize ' . ((&lines * 5 + 24) / 48)
+exe '3resize ' . ((&lines * 6 + 24) / 48)
+exe '4resize ' . ((&lines * 6 + 24) / 48)
 exe '5resize ' . ((&lines * 5 + 24) / 48)
-exe '6resize ' . ((&lines * 4 + 24) / 48)
+exe '6resize ' . ((&lines * 6 + 24) / 48)
 exe '7resize ' . ((&lines * 5 + 24) / 48)
-exe '8resize ' . ((&lines * 4 + 24) / 48)
 tabnext 5
 set stal=1
+badd +1 ~/product/lightweight-charts/src/gui/time-axis-widget.ts
 badd +54 ~/product/lightweight-charts/src/gui/canvas-utils.ts
-badd +52 ~/product/lightweight-charts/src/gui/labels-image-cache.ts
-badd +47 ~/product/lightweight-charts/src/gui/pane-widget.ts
-badd +140 ~/product/lightweight-charts/src/gui/price-axis-stub.ts
-badd +1 ~/product/lightweight-charts/src/gui/price-axis-widget.ts
-badd +487 ~/product/lightweight-charts/src/helpers/canvas-wrapper.ts
-badd +23 ~/product/lightweight-charts/src/model/text-width-cache.ts
-badd +0 ~/product/lightweight-charts/src/gui/time-axis-widget.ts
-badd +1 ~/product/lightweight-charts/src/renderers/area-renderer.ts
-badd +1 ~/product/lightweight-charts/src/renderers/bars-renderer.ts
-badd +1 ~/product/lightweight-charts/src/renderers/candlesticks-renderer.ts
 badd +1 ~/product/lightweight-charts/src/renderers/composite-renderer.ts
-badd +61 ~/product/lightweight-charts/src/renderers/crosshair-renderer.ts
-badd +23 ~/product/lightweight-charts/src/renderers/draw-line.ts
-badd +1 ~/product/lightweight-charts/src/renderers/grid-renderer.ts
-badd +1 ~/product/lightweight-charts/src/renderers/histogram-renderer.ts
-badd +1 ~/product/lightweight-charts/src/renderers/horizontal-line-renderer.ts
 badd +1 ~/product/lightweight-charts/src/renderers/ipane-renderer.ts
-badd +1 ~/product/lightweight-charts/src/renderers/iprice-axis-view-renderer.ts
-badd +1 ~/product/lightweight-charts/src/renderers/itime-axis-view-renderer.ts
-badd +1 ~/product/lightweight-charts/src/renderers/line-renderer.ts
-badd +1 ~/product/lightweight-charts/src/renderers/marks-renderer.ts
-badd +1 ~/product/lightweight-charts/src/renderers/price-axis-view-renderer.ts
 badd +50 ~/product/lightweight-charts/src/renderers/series-markers-arrow.ts
-badd +1 ~/product/lightweight-charts/src/renderers/series-markers-circle.ts
-badd +45 ~/product/lightweight-charts/src/renderers/series-markers-renderer.ts
-badd +1 ~/product/lightweight-charts/src/renderers/series-markers-square.ts
-badd +1 ~/product/lightweight-charts/src/renderers/time-axis-view-renderer.ts
-badd +1 ~/product/lightweight-charts/src/renderers/walk-line.ts
-badd +1 ~/product/lightweight-charts/src/renderers/watermark-renderer.ts
+badd +1 ~/product/lightweight-charts/tests/e2e/memleaks/memleaks-test-cases.ts
+badd +1 ~/product/lightweight-charts/src/gui/price-axis-widget.ts
+badd +140 ~/product/lightweight-charts/src/gui/price-axis-stub.ts
+badd +47 ~/product/lightweight-charts/src/gui/pane-widget.ts
+badd +52 ~/product/lightweight-charts/src/gui/labels-image-cache.ts
+badd +1 ~/product/lightweight-charts/src/renderers/candlesticks-renderer.ts
+badd +1 ~/product/lightweight-charts/src/renderers/bars-renderer.ts
+badd +1 ~/product/lightweight-charts/src/renderers/area-renderer.ts
+badd +23 ~/product/lightweight-charts/src/model/text-width-cache.ts
+badd +1 ~/product/lightweight-charts/src/helpers/canvas-wrapper.ts
+badd +1 ~/product/lightweight-charts/src/renderers/horizontal-line-renderer.ts
+badd +1 ~/product/lightweight-charts/src/renderers/histogram-renderer.ts
+badd +1 ~/product/lightweight-charts/src/renderers/grid-renderer.ts
+badd +23 ~/product/lightweight-charts/src/renderers/draw-line.ts
+badd +61 ~/product/lightweight-charts/src/renderers/crosshair-renderer.ts
+badd +1 ~/product/lightweight-charts/src/renderers/price-axis-view-renderer.ts
+badd +1 ~/product/lightweight-charts/src/renderers/marks-renderer.ts
+badd +0 ~/product/lightweight-charts/src/renderers/line-renderer.ts
+badd +1 ~/product/lightweight-charts/src/renderers/itime-axis-view-renderer.ts
+badd +1 ~/product/lightweight-charts/src/renderers/iprice-axis-view-renderer.ts
 badd +1 ~/product/lightweight-charts/src/views/pane/pane-price-axis-view.ts
-badd +82 ~/product/lightweight-charts/tests/e2e/memleaks/memleaks-test-cases.ts
+badd +1 ~/product/lightweight-charts/src/renderers/watermark-renderer.ts
+badd +0 ~/product/lightweight-charts/src/renderers/walk-line.ts
+badd +1 ~/product/lightweight-charts/src/renderers/time-axis-view-renderer.ts
+badd +1 ~/product/lightweight-charts/src/renderers/series-markers-square.ts
+badd +45 ~/product/lightweight-charts/src/renderers/series-markers-renderer.ts
+badd +1 ~/product/lightweight-charts/src/renderers/series-markers-circle.ts
 if exists('s:wipebuf') && len(win_findbuf(s:wipebuf)) == 0
   silent exe 'bwipe ' . s:wipebuf
 endif
@@ -4407,6 +4140,7 @@ if file_readable(s:sx)
   exe "source " . fnameescape(s:sx)
 endif
 let &so = s:so_save | let &siso = s:siso_save
+nohlsearch
 doautoall SessionLoadPost
 unlet SessionLoad
 " vim: set ft=vim :

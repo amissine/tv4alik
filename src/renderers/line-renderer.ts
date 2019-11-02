@@ -42,5 +42,10 @@ export class PaneRendererLine implements IPaneRenderer {
 		ctx.beginPath();
 		walkLine(ctx, this._data.items, this._data.lineType, this._data.visibleRange);
 		ctx.stroke();
+
+		this._drawAmounts(ctx);
+	}
+
+	private _drawAmounts(ctx: CanvasRenderingContext2D): void {
 	}
 }
