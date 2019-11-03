@@ -3,8 +3,8 @@ import { clone, DeepPartial, isString, merge } from '../helpers/strict-type-chec
 
 import { ChartOptions } from '../model/chart-model';
 
-import { ChartApi } from './chart-api';
-import { IChartApi } from './ichart-api';
+import { Chart } from './chart';
+import { IChart } from './ichart';
 import { chartOptionsDefaults } from './options/chart-options-defaults';
 
 export { LineStyle, LineType, LineWidth } from '../renderers/draw-line';
@@ -14,7 +14,7 @@ export { CrosshairMode } from '../model/crosshair';
 export { PriceScaleMode } from '../model/price-scale';
 export { UTCTimestamp } from '../model/time-data';
 
-export { IChartApi, MouseEventParams } from './ichart-api';
+export { IChart, MouseEventParams } from './ichart';
 export { ISeriesApi } from './iseries-api';
 
 export {
@@ -31,11 +31,11 @@ export {
  * @param options - any subset of ChartOptions to be applied at start.
  * @returns an interface to the created chart
  */
-export function createChart(container: string | HTMLElement, options?: DeepPartial<ChartOptions>): IChartApi {
+export function createChart(container: string | HTMLElement, options?: DeepPartial<ChartOptions>): IChart {
 	const htmlElement = ensureNotNull(isString(container) ? document.getElementById(container) : container);
 	const chartOptions = (options === undefined) ?
 		clone(chartOptionsDefaults) :
 		merge(clone(chartOptionsDefaults), options) as ChartOptions;
 
-	return new ChartApi(htmlElement, chartOptions);
+	return new Chart(htmlElement, chartOptions);
 }

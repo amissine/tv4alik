@@ -14,7 +14,7 @@ export {
 	isUTCTimestamp,
 	LineData,
 } from './api/data-consumer';
-export { IChartApi, MouseEventParams } from './api/ichart-api';
+export { IChart, MouseEventParams } from './api/ichart';
 export { ISeriesApi } from './api/iseries-api';
 
 export { createChart } from './api/create-chart';

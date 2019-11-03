@@ -7,3 +7,8 @@ The output of the following command,
   vim -S CanvasRenderingContext2D.vim
 
 to see them.
+
+The mvp branch will introduce the 'Trades' and 'Buckets' series. Why mvp? Here is 
+the starting point:
+
+    https://martinfowler.com/eaaDev/uiArchs.html

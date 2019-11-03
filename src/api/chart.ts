@@ -29,7 +29,7 @@ import { TimePointIndex } from '../model/time-data';
 import { CandlestickSeriesApi } from './candlestick-series-api';
 import { DataUpdatesConsumer, SeriesDataItemTypeMap } from './data-consumer';
 import { DataLayer, SeriesUpdatePacket } from './data-layer';
-import { IChartApi, MouseEventHandler, MouseEventParams, TimeRangeChangeEventHandler } from './ichart-api';
+import { IChart, MouseEventHandler, MouseEventParams, TimeRangeChangeEventHandler } from './ichart';
 import { IPriceScaleApi } from './iprice-scale-api';
 import { ISeriesApi } from './iseries-api';
 import { ITimeScaleApi, TimeRange } from './itime-scale-api';
@@ -55,7 +55,7 @@ function patchPriceFormat(priceFormat?: DeepPartial<PriceFormat>): void {
 	}
 }
 
-export class ChartApi implements IChartApi, DataUpdatesConsumer<SeriesType> {
+export class Chart implements IChart, DataUpdatesConsumer<SeriesType> {
 	private _chartWidget: ChartWidget;
 	private _dataLayer: DataLayer = new DataLayer();
 	private readonly _timeRangeChanged: Delegate<TimeRange | null> = new Delegate();

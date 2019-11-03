@@ -33,7 +33,7 @@ export type TimeRangeChangeEventHandler = (timeRange: TimeRange | null) => void;
  /*
  * The main interface of a single chart
  */
-export interface IChartApi {
+export interface IChart {
 	/**
 	 * Removes the chart object including all DOM elements. This is an irreversible operation, you cannot do anything with the chart after removing it.
 	 */
