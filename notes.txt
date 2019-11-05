@@ -8,7 +8,17 @@ The output of the following command,
 
 to see them.
 
-The mvp branch will introduce the 'Trades' and 'Buckets' series. Why mvp? Here is 
-the starting point:
+The mvp branch will introduce the 'Trades' and 'Buckets' drawings. Why mvp? For a
+starting point:
 
     https://martinfowler.com/eaaDev/uiArchs.html
+ 
+Interface IChart presents a UI for the whole chart. Instances of IDraw,
+each presenting a UI for a specific drawing, can be added to it. For example,
+
+  IDraw trades = IChart.addIDraw('Trades')
+
+An instance of IDraw can be updated/redrawn when more market feed becomes
+available:
+
+  trades.feed(IMarketFeed)
