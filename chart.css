@@ -2,7 +2,7 @@
   display: grid;
   grid-template-columns: 40px 1fr 40px;
   grid-template-rows: 1fr 20px;
-  grid-gap: 2px;
+  grid-gap: 0px;
 }
 .left-vert-axis1 {
   background: blue;

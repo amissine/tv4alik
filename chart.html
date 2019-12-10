@@ -8,14 +8,45 @@
   <body>
     <p>CSS Grid Layout of a chart</p>
     <div class="chart">
-      <div class="left-vert-axis1">One</div>
+      <div class="left-vert-axis1">One!</div>
       <div class="market-feeds">
-        <canvas style="height: 100%; width: 100%;">HTML5 support required</canvas>
+        <canvas id="marketFeed1">HTML5 support required</canvas>
       </div>
       <div class="right-vert-axis1">Three</div>
       <div class="bottom-left-corner">Four</div>
       <div class="time-axis">Five</div>
       <div class="bottom-right-corner">Six</div>
     </div>
+<!--
+<style>
+  canvas {
+    height: 100%;
+    width: 100%;
+  }
+</style>
+-->
+<script>
+  var mf1 = document.getElementById('marketFeed1')
+  console.log(mf1)
+
+  function draw( ctx ) {
+    ctx.fillStyle = 'rgb(200, 0, 0)'
+    ctx.fillRect(5, 5, 20, 20)
+
+    ctx.fillStyle = 'rgba(0, 0, 200, 0.5)'
+    ctx.fillRect(15, 15, 20, 20)
+    ctx.clearRect(20, 20, 10, 10)
+    ctx.strokeRect(25, 25, 5, 5)
+
+    ctx.beginPath()
+    ctx.moveTo(75, 50)
+    ctx.lineTo(100, 75)
+    ctx.lineTo(100, 25)
+    ctx.fill()
+  }
+  var ctx1 = mf1.getContext('2d')
+  draw(ctx1)
+</script>
+
   </body>
 </html>
