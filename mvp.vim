@@ -42,7 +42,6 @@ tabnew
 tabnew
 tabnew
 tabnew
-tabnew
 tabrewind
 edit src/api/create-chart.ts
 set splitbelow splitright
@@ -191,12 +190,12 @@ setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 17 - ((2 * winheight(0) + 2) / 5)
+let s:l = 16 - ((1 * winheight(0) + 2) / 5)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-17
-normal! 045|
+16
+normal! 0
 lcd ~/product/lightweight-charts
 wincmd w
 argglobal
@@ -320,12 +319,12 @@ setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 17 - ((0 * winheight(0) + 2) / 4)
+let s:l = 19 - ((2 * winheight(0) + 2) / 4)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-17
-normal! 049|
+19
+normal! 0
 lcd ~/product/lightweight-charts
 wincmd w
 argglobal
@@ -449,11 +448,11 @@ setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 8 - ((0 * winheight(0) + 2) / 5)
+let s:l = 12 - ((4 * winheight(0) + 2) / 5)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-8
+12
 normal! 0
 lcd ~/product/lightweight-charts
 wincmd w
@@ -578,11 +577,11 @@ setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 12 - ((4 * winheight(0) + 9) / 18)
+let s:l = 48 - ((17 * winheight(0) + 9) / 18)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-12
+48
 normal! 0
 lcd ~/product/lightweight-charts
 wincmd w
@@ -707,155 +706,18 @@ setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 24 - ((8 * winheight(0) + 4) / 9)
+let s:l = 10 - ((0 * winheight(0) + 4) / 9)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-24
-normal! 03|
+10
+normal! 0
 wincmd w
 exe '1resize ' . ((&lines * 5 + 24) / 48)
 exe '2resize ' . ((&lines * 4 + 24) / 48)
 exe '3resize ' . ((&lines * 5 + 24) / 48)
 exe '4resize ' . ((&lines * 18 + 24) / 48)
 exe '5resize ' . ((&lines * 9 + 24) / 48)
-tabnext
-edit ~/product/lightweight-charts/bs.html
-set splitbelow splitright
-set nosplitbelow
-set nosplitright
-wincmd t
-set winminheight=0
-set winheight=1
-set winminwidth=0
-set winwidth=1
-argglobal
-setlocal keymap=
-setlocal noarabic
-setlocal noautoindent
-setlocal backupcopy=
-setlocal balloonexpr=
-setlocal nobinary
-setlocal nobreakindent
-setlocal breakindentopt=
-setlocal bufhidden=
-setlocal buflisted
-setlocal buftype=
-setlocal nocindent
-setlocal cinkeys=0{,0},0),0],:,0#,!^F,o,O,e
-setlocal cinoptions=
-setlocal cinwords=if,else,while,do,for,switch
-setlocal colorcolumn=
-setlocal comments=s:<!--,m:\ \ \ \ ,e:-->
-setlocal commentstring=<!--%s-->
-setlocal complete=.,w,b,u,t,i
-setlocal concealcursor=
-setlocal conceallevel=0
-setlocal completefunc=
-setlocal nocopyindent
-setlocal cryptmethod=
-setlocal nocursorbind
-setlocal nocursorcolumn
-setlocal nocursorline
-setlocal define=
-setlocal dictionary=
-setlocal nodiff
-setlocal equalprg=
-setlocal errorformat=
-setlocal expandtab
-if &filetype != 'html'
-setlocal filetype=html
-endif
-setlocal fixendofline
-setlocal foldcolumn=0
-setlocal foldenable
-setlocal foldexpr=0
-setlocal foldignore=#
-setlocal foldlevel=0
-setlocal foldmarker={{{,}}}
-setlocal foldmethod=manual
-setlocal foldminlines=1
-setlocal foldnestmax=20
-setlocal foldtext=foldtext()
-setlocal formatexpr=
-setlocal formatoptions=tcq
-setlocal formatlistpat=^\\s*\\d\\+[\\]:.)}\\t\ ]\\s*
-setlocal formatprg=
-setlocal grepprg=
-setlocal iminsert=0
-setlocal imsearch=-1
-setlocal include=
-setlocal includeexpr=
-setlocal indentexpr=HtmlIndent()
-setlocal indentkeys=o,O,<Return>,<>>,{,},!^F
-setlocal noinfercase
-setlocal iskeyword=@,48-57,_,192-255,$
-setlocal keywordprg=
-setlocal nolinebreak
-setlocal nolisp
-setlocal lispwords=
-setlocal nolist
-setlocal makeencoding=
-setlocal makeprg=
-setlocal matchpairs=(:),{:},[:],<:>
-setlocal modeline
-setlocal modifiable
-setlocal nrformats=bin,octal,hex
-set number
-setlocal number
-setlocal numberwidth=4
-setlocal omnifunc=htmlcomplete#CompleteTags
-setlocal path=
-setlocal nopreserveindent
-setlocal nopreviewwindow
-setlocal quoteescape=\\
-setlocal noreadonly
-setlocal norelativenumber
-setlocal norightleft
-setlocal rightleftcmd=search
-setlocal noscrollbind
-setlocal scrolloff=-1
-setlocal shiftwidth=2
-setlocal noshortname
-setlocal sidescrolloff=-1
-setlocal signcolumn=auto
-setlocal nosmartindent
-setlocal softtabstop=0
-setlocal nospell
-setlocal spellcapcheck=[.?!]\\_[\\])'\"\	\ ]\\+
-setlocal spellfile=
-setlocal spelllang=en
-setlocal statusline=
-setlocal suffixesadd=
-setlocal swapfile
-setlocal synmaxcol=3000
-if &syntax != 'html'
-setlocal syntax=html
-endif
-setlocal tabstop=2
-setlocal tagcase=
-setlocal tags=
-setlocal termwinkey=
-setlocal termwinscroll=10000
-setlocal termwinsize=
-setlocal textwidth=0
-setlocal thesaurus=
-setlocal noundofile
-setlocal undolevels=-123456
-setlocal varsofttabstop=
-setlocal vartabstop=
-setlocal nowinfixheight
-setlocal nowinfixwidth
-setlocal wrap
-setlocal wrapmargin=0
-silent! normal! zE
-let s:l = 6 - ((5 * winheight(0) + 23) / 46)
-if s:l < 1 | let s:l = 1 | endif
-exe s:l
-normal! zt
-6
-normal! 0
-lcd ~/product/lightweight-charts
 tabnext
 edit ~/product/lightweight-charts/chart.css
 set splitbelow splitright
@@ -870,8 +732,8 @@ set winminheight=0
 set winheight=1
 set winminwidth=0
 set winwidth=1
-exe '1resize ' . ((&lines * 23 + 24) / 48)
-exe '2resize ' . ((&lines * 21 + 24) / 48)
+exe '1resize ' . ((&lines * 14 + 24) / 48)
+exe '2resize ' . ((&lines * 30 + 24) / 48)
 argglobal
 setlocal keymap=
 setlocal noarabic
@@ -992,7 +854,7 @@ setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 1 - ((0 * winheight(0) + 11) / 23)
+let s:l = 1 - ((0 * winheight(0) + 7) / 14)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
@@ -1121,17 +983,17 @@ setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 21 - ((20 * winheight(0) + 10) / 21)
+let s:l = 32 - ((4 * winheight(0) + 15) / 30)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-21
+32
 normal! 0
 lcd ~/product/lightweight-charts
 wincmd w
 2wincmd w
-exe '1resize ' . ((&lines * 23 + 24) / 48)
-exe '2resize ' . ((&lines * 21 + 24) / 48)
+exe '1resize ' . ((&lines * 14 + 24) / 48)
+exe '2resize ' . ((&lines * 30 + 24) / 48)
 tabnext
 edit ~/product/lightweight-charts/src/api/chart.ts
 set splitbelow splitright
@@ -1268,12 +1130,12 @@ setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 174 - ((0 * winheight(0) + 11) / 22)
+let s:l = 58 - ((9 * winheight(0) + 11) / 22)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-174
-normal! 010|
+58
+normal! 071|
 lcd ~/product/lightweight-charts
 wincmd w
 argglobal
@@ -1397,11 +1259,11 @@ setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 94 - ((9 * winheight(0) + 11) / 22)
+let s:l = 40 - ((8 * winheight(0) + 11) / 22)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-94
+40
 normal! 03|
 lcd ~/product/lightweight-charts
 wincmd w
@@ -1956,18 +1818,18 @@ normal! zt
 65
 normal! 0
 lcd ~/product/lightweight-charts
-tabnext 3
+tabnext 2
 set stal=1
-badd +40 ~/product/lightweight-charts/src/api/create-chart.ts
-badd +15 ~/product/lightweight-charts/notes.txt
-badd +1 ~/product/lightweight-charts/bs.html
+badd +1 ~/product/lightweight-charts/src/api/create-chart.ts
+badd +1 ~/product/lightweight-charts/notes.txt
+badd +6 ~/product/lightweight-charts/bs.html
 badd +30 ~/product/lightweight-charts/grid.css
 badd +1 ~/product/lightweight-charts/src/api/chart.ts
 badd +1 ~/product/lightweight-charts/src/gui/chart-widget.ts
 badd +49 ~/product/lightweight-charts/src/api/series-api.ts
 badd +20 ~/product/lightweight-charts/src/index.ts
-badd +12 ~/product/lightweight-charts/src/standalone.ts
-badd +40 ~/product/lightweight-charts/debug.html
+badd +1 ~/product/lightweight-charts/src/standalone.ts
+badd +15 ~/product/lightweight-charts/debug.html
 badd +19 ~/product/lightweight-charts/css.html
 badd +19 ~/product/lightweight-charts/src/api/ichart.ts
 badd +51 ~/product/lightweight-charts/src/api/iseries-api.ts

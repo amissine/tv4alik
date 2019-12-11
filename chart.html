@@ -27,7 +27,8 @@
 -->
 <script>
   var mf1 = document.getElementById('marketFeed1')
-  console.log(mf1)
+  var ctx1 = mf1.getContext('2d')
+  draw(ctx1)
 
   function draw( ctx ) {
     ctx.fillStyle = 'rgb(200, 0, 0)'
@@ -43,9 +44,15 @@
     ctx.lineTo(100, 75)
     ctx.lineTo(100, 25)
     ctx.fill()
+
+    ctx.strokeStyle = 'rgb(200, 0, 0)'
+    let p = new Path2D('M150 50 h5 m0 -20 v80 m0 -10 h5')
+    ctx.stroke(p)
+
+    ctx.strokeStyle = 'rgb(0, 200, 0)'
+    p = new Path2D('M162 90 h5 m0 10 v-70 m0 5 h5')
+    ctx.stroke(p)
   }
-  var ctx1 = mf1.getContext('2d')
-  draw(ctx1)
 </script>
 
   </body>
