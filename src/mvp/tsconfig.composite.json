@@ -1,0 +1,13 @@
+{
+	"extends": "../../tsconfig.base.json",
+	"compilerOptions": {
+		"composite": true
+	},
+  "references": [
+    { "path": "./presenter/tsconfig.composite.json" },
+    { "path": "./helpers/tsconfig.composite.json" }
+  ],
+	"include": [
+    "./create-chart.ts"
+	]
+}

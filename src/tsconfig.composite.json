@@ -4,11 +4,7 @@
 		"composite": true
 	},
 	"references": [
-		{ "path": "./mvp/api/tsconfig.composite.json" },
-		{ "path": "./formatters/tsconfig.composite.json" },
-		{ "path": "./gui/tsconfig.composite.json" },
-		{ "path": "./helpers/tsconfig.composite.json" },
-		{ "path": "./tsconfig.model.json" }
+		{ "path": "./mvp/tsconfig.composite.json" }
 	],
 	"include": [
 		"./index.ts",
