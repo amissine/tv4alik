@@ -1,6 +1,8 @@
 import { ChartOptions, defaultChartOptions } from './presenter/options'
 import { ensureNotNull } from './helpers/assertions';
 import { clone, isString, merge, DeepPartial } from './helpers/strict-type-checks';
+import { IChart } from './presenter/ichart'
+import { Chart4alik } from './presenter/chart'
 
 /**
  * This function is the main entry point to the Custom Charts UI.
