@@ -1,5 +1,7 @@
 import { ChartOptions } from './options'
 import { DeepPartial } from '../helpers/strict-type-checks'
+import { MouseEventHandler } from '../helpers/misc'
+import { UnifiedMarketFeed } from '../model/umf'
 
 /**
  * The API of a custom chart.
@@ -24,14 +26,14 @@ export interface IChart {
 	 * @param feed - the initial feed
 	 * @returns the chart (for chaining)
 	 */
-	pour (feed: UnifiedMarketFeed): IChart
+  pour (feed: Array<UnifiedMarketFeed>): IChart
 
 	/**
 	 * Add more feed to the chart.
 	 * @param feed - the feed to add
 	 * @returns the chart (for chaining)
 	 */
-	add (feed: UnifiedMarketFeed): IChart
+  add (feed: Array<UnifiedMarketFeed>): IChart
 
 	/**
 	 * Remove all feed from the chart (irreversible operation).
@@ -44,61 +46,35 @@ export interface IChart {
 	 * @param handler - handler (function) to be called on mouse click
 	 * @returns the chart (for chaining)
 	 */
-	subscribeClick(handler: MouseEventHandler): void;
+	subscribeClick(handler: MouseEventHandler): IChart;
 
 	/**
 	 * Removes mouse click subscription
 	 * @param handler - previously subscribed handler
 	 * @returns the chart (for chaining)
 	 */
-	unsubscribeClick(handler: MouseEventHandler): void;
+	unsubscribeClick(handler: MouseEventHandler): IChart;
 
 	/**
 	 * Adds a subscription to crosshair movement to receive notifications on crosshair movements
 	 * @param handler - handler (function) to be called on crosshair move
 	 * @returns the chart (for chaining)
 	 */
-	subscribeCrosshairMove(handler: MouseEventHandler): void;
+	subscribeCrosshairMove(handler: MouseEventHandler): IChart;
 
 	/**
 	 * Removes a subscription on crosshair movement
 	 * @param handler - previously subscribed handler
 	 * @returns the chart (for chaining)
 	 */
-	unsubscribeCrosshairMove(handler: MouseEventHandler): void;
-
-	/**
-	 * Adds a subscription to visible range changes to receive notification about visible range of data changes
-	 * @param handler - handler (function) to be called on changing visible data range
-	 * @returns the chart (for chaining)
-	 */
-	subscribeVisibleTimeRangeChange(handler: TimeRangeChangeEventHandler): void;
-
-	/**
-	 * Removes a subscription to visible range changes
-	 * @param handler - previously subscribed handler
-	 * @returns the chart (for chaining)
-	 */
-	unsubscribeVisibleTimeRangeChange(handler: TimeRangeChangeEventHandler): void;
-
-	/**
-	 * Returns API to manipulate the price scale
-	 * @returns - target API
-	 */
-	priceScale(): IPriceScaleApi;
-
-	/**
-	 * Returns API to manipulate the time scale
-	 * @returns - target API
-	 */
-	timeScale(): ITimeScaleApi;
+	unsubscribeCrosshairMove(handler: MouseEventHandler): IChart;
 
 	/**
 	 * Applies new options to the chart
 	 * @param options - any subset of chart options
 	 * @returns the chart (for chaining)
 	 */
-	applyOptions(options: DeepPartial<ChartOptions>): void;
+	applyOptions(options: DeepPartial<ChartOptions>): IChart;
 
 	/**
 	 * Returns currently applied options

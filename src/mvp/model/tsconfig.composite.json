@@ -4,7 +4,6 @@
 		"composite": true
 	},
   "references": [
-    { "path": "../model/tsconfig.composite.json" },
     { "path": "../helpers/tsconfig.composite.json" }
   ],
 	"include": [
