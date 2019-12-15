@@ -5,7 +5,8 @@
 	},
   "references": [
     { "path": "../model/tsconfig.composite.json" },
-    { "path": "../helpers/tsconfig.composite.json" }
+    { "path": "../view/tsconfig.composite.json" },
+    { "path": "../util/tsconfig.composite.json" }
   ],
 	"include": [
 		"./**/*.ts"

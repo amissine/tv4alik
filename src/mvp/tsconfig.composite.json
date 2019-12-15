@@ -5,7 +5,7 @@
 	},
   "references": [
     { "path": "./presenter/tsconfig.composite.json" },
-    { "path": "./helpers/tsconfig.composite.json" }
+    { "path": "./util/tsconfig.composite.json" }
   ],
 	"include": [
     "./create-chart.ts"

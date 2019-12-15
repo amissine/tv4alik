@@ -1,6 +1,6 @@
-import { ChartOptions, defaultChartOptions } from './presenter/options'
-import { ensureNotNull } from './helpers/assertions';
-import { clone, isString, merge, DeepPartial } from './helpers/strict-type-checks';
+import { ChartOptions, defaultChartOptions } from './util/options'
+import { ensureNotNull } from './util/assertions';
+import { clone, isString, merge, DeepPartial } from './util/strict-type-checks';
 import { IChart } from './presenter/ichart'
 import { Chart4alik } from './presenter/chart'
 

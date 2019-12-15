@@ -1,6 +1,6 @@
-import { ChartOptions } from './options'
-import { DeepPartial } from '../helpers/strict-type-checks'
-import { MouseEventHandler } from '../helpers/misc'
+import { ChartOptions } from '../util/options'
+import { DeepPartial } from '../util/strict-type-checks'
+import { MouseEventHandler } from '../util/misc'
 import { UnifiedMarketFeed } from '../model/umf'
 
 /**
@@ -26,14 +26,14 @@ export interface IChart {
 	 * @param feed - the initial feed
 	 * @returns the chart (for chaining)
 	 */
-  pour (feed: Array<UnifiedMarketFeed>): IChart
+  pour (feed: ReadonlyArray<UnifiedMarketFeed>): IChart
 
 	/**
 	 * Add more feed to the chart.
 	 * @param feed - the feed to add
 	 * @returns the chart (for chaining)
 	 */
-  add (feed: Array<UnifiedMarketFeed>): IChart
+  add (feed: ReadonlyArray<UnifiedMarketFeed>): IChart
 
 	/**
 	 * Remove all feed from the chart (irreversible operation).
@@ -81,10 +81,4 @@ export interface IChart {
 	 * @returns - full set of currently applied options, including defaults
 	 */
 	options(): Readonly<ChartOptions>;
-
-	/**
-	 * Make a screenshot of the chart with all the elements excluding crosshair.
-	 * @returns a canvas with the chart drawn on
-	 */
-	takeScreenshot(): HTMLCanvasElement;
 }

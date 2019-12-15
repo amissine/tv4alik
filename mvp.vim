@@ -1415,9 +1415,9 @@ set winheight=1
 set winminwidth=0
 set winwidth=1
 exe '1resize ' . ((&lines * 10 + 24) / 48)
-exe '2resize ' . ((&lines * 11 + 24) / 48)
-exe '3resize ' . ((&lines * 11 + 24) / 48)
-exe '4resize ' . ((&lines * 10 + 24) / 48)
+exe '2resize ' . ((&lines * 4 + 24) / 48)
+exe '3resize ' . ((&lines * 21 + 24) / 48)
+exe '4resize ' . ((&lines * 7 + 24) / 48)
 argglobal
 setlocal keymap=
 setlocal noarabic
@@ -1667,7 +1667,7 @@ setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 1 - ((0 * winheight(0) + 5) / 11)
+let s:l = 1 - ((0 * winheight(0) + 2) / 4)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
@@ -1796,12 +1796,12 @@ setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 3 - ((1 * winheight(0) + 5) / 11)
+let s:l = 36 - ((17 * winheight(0) + 10) / 21)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-3
-normal! 051|
+36
+normal! 021|
 lcd ~/product/lightweight-charts
 wincmd w
 argglobal
@@ -1925,7 +1925,7 @@ setlocal nowinfixwidth
 setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 1 - ((0 * winheight(0) + 5) / 10)
+let s:l = 1 - ((0 * winheight(0) + 3) / 7)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
@@ -1935,9 +1935,9 @@ lcd ~/product/lightweight-charts
 wincmd w
 2wincmd w
 exe '1resize ' . ((&lines * 10 + 24) / 48)
-exe '2resize ' . ((&lines * 11 + 24) / 48)
-exe '3resize ' . ((&lines * 11 + 24) / 48)
-exe '4resize ' . ((&lines * 10 + 24) / 48)
+exe '2resize ' . ((&lines * 4 + 24) / 48)
+exe '3resize ' . ((&lines * 21 + 24) / 48)
+exe '4resize ' . ((&lines * 7 + 24) / 48)
 tabnext
 edit ~/product/lightweight-charts/chart.css
 set splitbelow splitright
